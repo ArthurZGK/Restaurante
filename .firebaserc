@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularg21-2021pe": {
+      "hosting": {
+        "restaurante": [
+          "angularg21-2021pe"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<div class="slide">
+	<img
+		src="assets/images/burger.png"
+		width="450px"
+		height="350px"
+	/>
+</div>
+<mat-toolbar>
+	<div class="row-center" *ngFor="let item of menu" >
+			<img
+				[src]="getIcon(item.suffix)"
+				*ngIf="getIcon(item.suffix)"
+				width="45px"
+				height="45px"
+			/>
+			<p
+				*ngIf="getIcon(item.suffix)"
+			>{{item.name}}</p>
+	</div>
+</mat-toolbar>
+
