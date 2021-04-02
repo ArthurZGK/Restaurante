@@ -9,11 +9,15 @@ import { ComponentsModule } from './global/components/components.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { MaterialModule } from './global/material/material.module';
+import { CategoryComponent } from './views/category/category.component';
+import { CategoryListComponent } from './views/category/category-list/category-list.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent
+		HomeComponent,
+		CategoryComponent,
+		CategoryListComponent
 	],
 	imports: [
 		BrowserModule,

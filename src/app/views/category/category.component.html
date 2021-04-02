@@ -1,0 +1,21 @@
+<azk-navbar ></azk-navbar>
+<div class="container">
+	<azk-category-list *ngIf="!id"
+		[categories]="categories"
+		(onClick)="getSingleCategory($event)"
+	></azk-category-list>
+
+	<!-- TODO listar los platos -->
+	<div class="row-center-vertical">
+		<div class="dishCard" *ngFor="let dish of dishes">
+			<img [src]="dish.image" [alt]="dish.name" width="105px" height="95px" />
+			<div>
+				<p class="dishName">{{dish.name}}</p>
+				<p class="dishDescription">{{dish.description}}</p>
+				<p class="dishDescription">unidades. {{dish.stock}}</p>
+				<p class="price">S/ {{dish.price}}</p>
+			</div>
+		</div>
+	</div>
+	
+</div>

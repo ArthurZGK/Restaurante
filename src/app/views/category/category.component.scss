@@ -1,0 +1,31 @@
+.dishCard {
+	display: flex;
+	flex-flow: row;
+	width: 525px;
+	height: 140px;
+	background-color: #f7f7f7;
+	border-radius: 12px;
+	box-shadow: 0px 2px 4px #bababa;
+	padding: 12px;
+	margin: 12px;
+	align-items: center;
+
+	p {
+		margin: 0 0 4px 0;
+	}
+
+	img {
+		margin: 0 12px 0 0;
+	}
+
+	.dishName {
+		font-weight: bold;
+		font-size: 16px;
+		color: rgb(18, 21, 23)
+	}
+	
+	.price {
+		font-weight: bold;
+		color: rgb(18, 21, 23)
+	}
+}

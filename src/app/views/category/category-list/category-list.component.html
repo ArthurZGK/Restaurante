@@ -1,0 +1,16 @@
+<h1 class="title">Mira nuestras categorias</h1>
+<div class="row-center-vertical">
+	<div *ngFor="let category of categories"
+		class="card"
+		(click)="onClick.emit(category)"
+	>
+		<div class="card-content">
+			<img
+				[src]="category.icon"
+				width="125px"
+				height="125px"
+			/>
+			<p>{{category.name}}</p>
+		</div>
+	</div>
+</div>

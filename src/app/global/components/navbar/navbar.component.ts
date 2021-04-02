@@ -16,6 +16,11 @@ export class NavbarComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
+
+		const menu = JSON.parse(sessionStorage.getItem('menu'));
+		if(menu){
+			this.menu = menu;
+		}
 	}
 
 	getIcon(suffix: number): string | false {

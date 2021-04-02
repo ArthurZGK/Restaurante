@@ -1,5 +1,6 @@
-<azk-navbar [menu]="menu" ></azk-navbar>
-<div class="row">
+ <!-- <azk-navbar [menu]="menu" ></azk-navbar> -->
+
+ <!-- <div class="row">
 	<div class="categoryList">
 		<div *ngFor="let category of categories">
 			<label>{{category.name}}</label>
@@ -9,4 +10,25 @@
 		<h1>Bienvenidos</h1>
 		<p>Somos su mejór elección en el mercado nacional e internacional. Los invitamos a probar nuestras delicosas recetas preparadas con una buena sazon y mucho amor!</p>
 	</div>
+</div>  -->
+
+<azk-navbar></azk-navbar>
+<div class="container">
+	<h1 class="title">Nuestras categorias</h1>
+	<div class="row-center-vertical">
+		<div *ngFor="let category of categories"
+			class="card"
+			(click)="goToCategorySelected(category)"
+		>
+			<div class="card-content">
+				<img
+					[src]="category.icon"
+					width="125px"
+					height="125px"
+				/>
+				<p>{{category.name}}</p>
+			</div>
+		</div>
+	</div>
 </div>
+

@@ -27,4 +27,20 @@ export class CategoryService {
 			return error;
 		}
 	}
+
+	public async getAllDishesByCategory(id: string): Promise<any[]> {
+		try {
+			const response = await this._db.collection('dishes').ref.where('categories', 'array-contains', id).get().then(documetns => {
+				return documetns.docs.map(el => {
+					const _id = el.id;
+					const data: any = el.data();
+					return {_id, ...data};
+				});
+			});
+			return response;
+		} catch (error) {
+			return error;
+		}
+	}
+
 }
