@@ -24,32 +24,32 @@ export class HomeComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-		this.getMenuItems();
+		// this.getMenuItems();
 		this.getCategories();
 	}
 
 	//TODO hacer esta función GLOBAL
-	public async getMenuItems() {
+	// public async getMenuItems() {
 
-		// await this._navbarSrv.getMenu().then(res => {
-		// 	this.menu = res;
-		// }).catch(err => {
-		// 	console.log(err);
-		// });
+	// 	// await this._navbarSrv.getMenu().then(res => {
+	// 	// 	this.menu = res;
+	// 	// }).catch(err => {
+	// 	// 	console.log(err);
+	// 	// });
 
 
-		const menu = JSON.parse(sessionStorage.getItem('menus'))
-		if(!menu){
-			await this._navbarSrv.getMenu().then(res => {
-				this.menu = res;
-				sessionStorage.setItem('menu', JSON.stringify(this.menu));
-			}).catch(err => {
-				console.log(err);
-			});
-		}else {
-			this.menu = menu;
-		}
-	}
+	// 	const menu = JSON.parse(sessionStorage.getItem('menus'))
+	// 	if(!menu){
+	// 		await this._navbarSrv.getMenu().then(res => {
+	// 			this.menu = res;
+	// 			sessionStorage.setItem('menu', JSON.stringify(this.menu));
+	// 		}).catch(err => {
+	// 			console.log(err);
+	// 		});
+	// 	}else {
+	// 		this.menu = menu;
+	// 	}
+	// }
 
 	public async getCategories(){
 		await this._categorySrv.getAllCategories().then(res => {
